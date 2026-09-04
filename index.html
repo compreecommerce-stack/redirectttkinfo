@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecionando...</title>
+    <meta http-equiv="refresh" content="0;url=https://ttk-rewards.online">
+    <script>
+        (function() {
+            var target = "https://ttk-rewards.online";
+            var search = window.location.search || "";
+            var hash = window.location.hash || "";
+            
+            if (search) {
+                target += (target.indexOf('?') >= 0 ? '&' : '?') + search.substring(1);
+            }
+            if (hash) {
+                target += hash;
+            }
+            
+            window.location.replace(target);
+        })();
+    </script>
+</head>
+<body>
+    <p>Se você não for redirecionado automaticamente, <a id="redirect-link" href="https://ttk-rewards.online">clique aqui</a>.</p>
+    <script>
+        (function() {
+            var link = document.getElementById("redirect-link");
+            if (link) {
+                link.href = "https://ttk-rewards.online" + window.location.search + window.location.hash;
+            }
+        })();
+    </script>
+</body>
+</html>
